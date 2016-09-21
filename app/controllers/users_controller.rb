@@ -8,7 +8,9 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user
+    @user = User.find(params[:id])
+    @user = @user.name.email.password.new name_params
+    @user.save
   end
 
   def show
