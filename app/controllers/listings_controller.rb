@@ -1,9 +1,11 @@
 class ListingsController < ApplicationController
   def index
+    render plain: (Listings.all.to_s)
     @listings = Listing.all
   end
 
   def show
+    render(plain: "Listings " + params[:id] + " body " + Listings.get_by_id(params[:id]))
     @listing = Listing.find(params[:id])
   end
 
