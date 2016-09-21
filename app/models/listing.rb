@@ -1,5 +1,5 @@
 class Listing < ActiveRecord::Base
-  belongs_to :user.owner
-  has_many :messages
-  
+  belongs_to :user
+  #has_many :messages
+
 end

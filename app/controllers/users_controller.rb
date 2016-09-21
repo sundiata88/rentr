@@ -11,7 +11,7 @@ before_action :authorize, only: [:show, :edit]
 
   def create
     @user = User.new(user_params)
-    @user.save
+    if @user.save
     redirect_to root_path
   end
 
@@ -36,4 +36,4 @@ before_action :authorize, only: [:show, :edit]
   def user_params
     params.require(:user).permit(:name, :email, :password, :role)
   end
-end
+end 
