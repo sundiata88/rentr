@@ -7,10 +7,14 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def create
+    @user = User.new(user_params)
+    @user.save
+    redirect_to root_path
+  end
+
   def edit
     @user = User.find(params[:id])
-    @user = @user.name.email.password.new name_params
-    @user.save
   end
 
   def show
@@ -24,5 +28,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     redirect_to(root_path)
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :role)
   end
 end
