@@ -4,5 +4,6 @@
 <%= form_for @listing do |f| %>
 Title: <%= f.text_field :title %><br>
 Body: <%= f.text_area :body %><br>
+Photo: <%= f.file_field :photo %>
   <%= f.submit 'Create Listing', class: 'btn btn-success' %>
 <% end %>
