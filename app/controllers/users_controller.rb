@@ -12,8 +12,9 @@ before_action :authorize, only: [:show, :edit]
   def create
     @user = User.new(user_params)
     if @user.save
-    redirect_to root_path
+    redirect_to listings_path
   end
+end
 
   def edit
     @user = User.find(params[:id])
@@ -37,4 +38,3 @@ before_action :authorize, only: [:show, :edit]
     params.require(:user).permit(:name, :email, :password, :role)
   end
 end
-end 

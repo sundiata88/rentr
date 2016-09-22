@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
   def index
-    render plain: (Listings.all.to_s)
+    # render plain: (Listings.all.to_s)
     @listings = Listing.all
   end
 
@@ -35,4 +35,5 @@ class ListingsController < ApplicationController
   private
   def lister_params
     params.require(:owner).permit(:title, :body, :picture)
+end
 end
