@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
   end
 
   def show
-    render(plain: "Listings " + params[:id] + " body " + Listings.get_by_id(params[:id]))
+    #render(plain: "Listings " + params[:id] + " body " + Listings.get_by_id(params[:id]))
     @listing = Listing.find(params[:id])
   end
 
@@ -16,7 +16,7 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     @listing.save
-    redirect_to root_path
+    redirect_to listing_path(@listing)
   end
 
   def update
@@ -33,7 +33,7 @@ class ListingsController < ApplicationController
   end
 
   private
-  def lister_params
-    params.require(:owner).permit(:title, :body, :picture)
+  def listing_params
+    params.require(:listing).permit(:title, :body, :picture)
 end
 end

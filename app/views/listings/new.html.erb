@@ -1,4 +1,8 @@
 <h1>Listings#new</h1>
 <p>Find me in app/views/listings/new.html.erb</p>
 
-#connect to listings page 
+<%= form_for @listing do |f| %>
+Title: <%= f.text_field :title %><br>
+Body: <%= f.text_area :body %><br>
+  <%= f.submit 'Create Listing', class: 'btn btn-success' %>
+<% end %>
