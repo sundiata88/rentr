@@ -36,4 +36,5 @@ before_action :authorize, only: [:show, :edit]
   def user_params
     params.require(:user).permit(:name, :email, :password, :role)
   end
+end
 end 
