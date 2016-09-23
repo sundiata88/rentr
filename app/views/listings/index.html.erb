@@ -1,6 +1,23 @@
 <h1>Listings#index</h1>
 <p>Find me in app/views/listings/index.html.erb</p>
 
+<div class="form-group">
+    <div class="col-md-8 col-md-offset-4">
+        <%= link_to "Logout", root_path, class: 'btn btn-primary' %>
+    </div>
+</div>
+<hr>
+
+<div class="form-group">
+    <div class="col-md-8 col-md-offset-4">
+        <%= link_to "Create Listing", new_listing_path, class: 'btn btn-primary' %>
+    </div>
+</div>
+<hr>
+
+
+
+
 <div class="container">
 <% @listings.each_slice(3).each do |group| %>
   <div class="row">
@@ -21,19 +38,7 @@
   </div>
 <% end %>
 
-<div class="form-group">
-    <div class="col-md-8 col-md-offset-4">
-        <%= link_to "Logout", root_path, class: 'btn btn-primary' %>
-    </div>
-</div>
-<hr>
 
-<div class="form-group">
-    <div class="col-md-8 col-md-offset-4">
-        <%= link_to "Create Listing", new_listing_path, class: 'btn btn-primary' %>
-    </div>
-</div>
-<hr>
 
 
 
