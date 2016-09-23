@@ -1,6 +1,27 @@
 <h1>Listings#index</h1>
 <p>Find me in app/views/listings/index.html.erb</p>
 
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="#"><div class="form-group">
+      <div class="col-md-8 col-md-offset-4">
+          <%= link_to "Create Listing", new_listing_path, class: 'btn btn-primary' %>
+      </div>
+  </div></a></li>
+
+
+  <li role="presentation" class="active"><a href="#"><div class="form-group">
+      <div class="col-md-8 col-md-offset-4">
+          <%= link_to "Logout", root_path, class: 'btn btn-primary' %>
+      </div>
+  </div></a></li>
+
+
+
+</ul>
+
+
+
+
 <div class="form-group">
     <div class="col-md-8 col-md-offset-4">
         <%= link_to "Logout", root_path, class: 'btn btn-primary' %>
