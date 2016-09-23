@@ -7,3 +7,20 @@ Title: <%= f.text_field :title %><br>
 Body: <%= f.text_area :body %><br>
   <%= f.submit 'Create Listing', class: 'btn btn-success' %>
 <% end %>
+
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputTitle">Title</label>
+    <input type="title" class="form-control" id="exampleInputTitle" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputBody">Description</label>
+    <input type="description" class="form-control" id="exampleInputdescription" placeholder="Describe here">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Add a photo!</label>
+    <input type="file" id="exampleInputFile"><br>
+  </div>
+  <button type="submit" class="btn btn-success">Create listing</button>
+</form>
