@@ -3,7 +3,7 @@
 
 <%= form_for @listing, html: { multipart: true } do |f| %>
 Photo: <%= f.file_field :photo %><br>
-Title: <input type="text" placeholder="Title"><%= f.text_field :title %><br>
-Body: <textarea rows="3"><%= f.text_area :body %></textarea><br>
+Title: <input type="text" class="form-control" placeholder="Title"><%= f.text_field :title %><br>
+Body: <textarea class="form-control" rows="3"><%= f.text_area :body %></textarea><br>
   <%= f.submit 'Create Listing', class: 'btn btn-success' %>
 <% end %>
