@@ -3,14 +3,14 @@
 
 <ul class="nav nav-pills">
   <div class="form-group">
-      <div class="col-md-8 col-md-offset-4">
+      <div class="col-md-2 col-md-offset-10">
           <%= link_to "Create Listing", new_listing_path, class: 'btn btn-primary' %>
       </div>
   </div>
 
 
   <div class="form-group">
-      <div class="col-md-8 col-md-offset-4">
+      <div class="col-md-2 col-md-offset-10">
           <%= link_to "Logout", root_path, class: 'btn btn-primary' %>
       </div>
   </div>
@@ -43,12 +43,9 @@
 <% end %>
 
 
-
-
-
 <% @listings.each do |u| %>
-Photo: <%= link_to image_tag(u.photo.url(:medium)), listing_path(u) %>
-Title: <%= u.title %><br>
+<%= link_to image_tag(u.photo.url(:medium)), listing_path(u) %>
+<%= u.title %><br>
 Description: <%= u.body %><br>
 
 <div class="form-group">
