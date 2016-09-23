@@ -22,19 +22,16 @@
 <% @listings.each_slice(3).each do |group| %>
   <div class="row">
     <% group.each do |u| %>
-      <div class="col-md-4">
-        <%= link_to image_tag(u.photo.url(:medium)), listing_path(u) %>
-        <%= u.title %><br>
-        Description: <%= u.body %><br>
-
-        <div class="form-group">
-            <div class="col-md-8 col-md-offset-4">
-                <%= link_to "Edit Listing", edit_listing_path(u), class: 'btn btn-primary' %>
+      <div class="col-md-6 col-md-4">
+        <div class="caption">
+          <h3><%= u.title %><br></h3>
+        <p><%= link_to image_tag(u.photo.url(:medium)), listing_path(u) %>
+        <%= u.body %><br></p>
+              <p><%= link_to "Edit Listing", edit_listing_path(u), class: 'btn btn-primary' %></p>
             </div>
         </div>
-
-      </div>
-    <% end %>
+    </div>
+  <% end %>
   </div>
 <% end %>
 </div>
