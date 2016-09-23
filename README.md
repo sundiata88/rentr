@@ -12,11 +12,12 @@ Unsolved problems:
 - connecting a comment box to the listings so that the messaging system mentioned above can be initiated within the listing index.
 -creating separate views for two different types of users (owners and applicants)
 - getting more practice with Bootstrap and Ruby on Rails 4
+- how to get income sorting aspect of app completed.
 
 
 Wireframe:
 
-
+![WIREFRAME_SCREENSHOT](readme_assets/images/wireframeproject2.png)
 
 
 User stories:
