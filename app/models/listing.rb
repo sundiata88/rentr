@@ -30,6 +30,3 @@ class Listing < ActiveRecord::Base
  # makes sure that the only type of file being uploaded is an image:
  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
 end
-
-
- 

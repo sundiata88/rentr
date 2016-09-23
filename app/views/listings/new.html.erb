@@ -1,9 +1,9 @@
 <h1>Listings#new</h1>
 <p>Find me in app/views/listings/new.html.erb</p>
 
-<%= form_for @listing, html: { multipark: true } do |f| %>
+<%= form_for @listing, html: { multipart: true } do |f| %>
+Photo: <%= f.file_field :photo %><br>
 Title: <%= f.text_field :title %><br>
 Body: <%= f.text_area :body %><br>
-Photo: <%= f.file_field :photo %>
   <%= f.submit 'Create Listing', class: 'btn btn-success' %>
 <% end %>

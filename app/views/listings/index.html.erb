@@ -8,13 +8,25 @@
 </div>
 <hr>
 
+<div class="form-group">
+    <div class="col-md-8 col-md-offset-4">
+        <%= link_to "Create Listing", new_listing_path, class: 'btn btn-primary' %>
+    </div>
+</div>
+<hr>
+
+
 
 <% @listings.each do |u| %>
 Photo: <%= link_to image_tag(u.photo.url(:medium)), listing_path(u) %>
 Title: <%= u.title %><br>
 Description: <%= u.body %><br>
 
-
+<div class="form-group">
+    <div class="col-md-8 col-md-offset-4">
+        <%= link_to "Edit Listing", edit_listing_path(u), class: 'btn btn-primary' %>
+    </div>
+</div>
 
 
 <hr>
