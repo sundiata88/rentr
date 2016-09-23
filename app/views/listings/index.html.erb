@@ -25,7 +25,7 @@
       <div class="col-md-6 col-md-4">
         <div class="caption">
           <h3><%= u.title %><br></h3>
-        <p><%= link_to image_tag(u.photo.url(:small)), listing_path(u) %><br></p><
+        <p><%= link_to image_tag(u.photo.url(:medium)), listing_path(u) %><br></p>
           <p><%= u.body %><br></p>
               <p><%= link_to "Edit Listing", edit_listing_path(u), class: 'btn btn-primary' %></p>
             </div>
