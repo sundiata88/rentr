@@ -22,7 +22,7 @@
 <% @listings.each_slice(3).each do |group| %>
   <div class="row">
     <% group.each do |u| %>
-      <div class="col-md-6 col-md-4">
+      <div class="col-md-4">
         <div class="caption">
           <h3><%= u.title %><br></h3>
         <p><%= link_to image_tag(u.photo.url(:medium)), listing_path(u) %><br></p>
